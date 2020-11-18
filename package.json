@@ -1,0 +1,25 @@
+{
+  "name": "openclassrooms",
+  "version": "1.0.0",
+  "description": "courses openclassrooms",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamalelkhdadi/openclassrooms.git"
+  },
+  "keywords": [
+    "courses"
+  ],
+  "author": "jamal el khdadi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamalelkhdadi/openclassrooms/issues"
+  },
+  "homepage": "https://github.com/jamalelkhdadi/openclassrooms#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  } 
+}
