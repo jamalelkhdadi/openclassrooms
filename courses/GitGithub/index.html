@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
-        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="styles/style.css"/>
-        <title>Hello, World!</title>
-    </head>
+<html lang="en">
+<head>
+  <title>git github</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.console {
+  background-color:#000;
+    width:100%;
+    max-width:92vw;
+    margin-left:15px;
+    margin-right:40px;
+    text-align:left;
+    border-radius:5px;
+    margin-bottom:10px
+}
+@media (max-width:830px) {
+    .console {
+        margin-right:auto;
+        margin-left:auto
+    }
+}
+.console-head {
+    overflow:hidden;
+    background-color:#d5d5d5;
+    padding:8px 15px;
+    margin-bottom: -8px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px
+}
+.console-dot {
+    float:left;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    margin-right:7px;
+    box-shadow:0 1px 1px 0 rgba(0,0,0,.2)
+}
+.console-dot-red {
+    background-color:#ff6057
+}
+.console-dot-yellow {
+    background-color:#ffc22e
+}
+.console-dot-green {
+    background-color:#28ca40
+}
+.console-body {
+    background-color:#1e1e1e
+}
+</style>
+</head>
 <body>
-        <h1>Hello, World!</h1>
+    <div class="container mt-4">
+        
+    
+        <br><br>
+        
+    
+         <div class="console mt-4">
+    <div class="console-head">
+      <div class="console-dot console-dot-red"></div>
+      <div class="console-dot console-dot-yellow"></div>
+      <div class="console-dot console-dot-green"></div>
+    </div>
+    <div class="console-body text-center">
+     <h1 class="p-3 m-3">Git Github</h1>
+    </div>
+  </div>
+        
         <h2>Initialisé Git</h2>
         <pre>$ git config --global user.name "John Doe"</pre>
        
