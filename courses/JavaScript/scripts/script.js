@@ -1,53 +1,60 @@
-
-let episode = {
-  title: 'Dark Beginnings',
-  duration: 45,
-  hasBeenWatched: false
-};
-
-// Create variables here
-// =====================================
-
-let episodeTitle = episode.title;
-let episodeDuration = episode.duration;
-let episodeHasBeenWatched = episode.hasBeenWatched;
-
-// =====================================
-
-document.querySelector('#episode-info').innerText = `Episode: ${episodeTitle}
-Duration: ${episodeDuration} min
-${episodeHasBeenWatched ? 'Already watched' : 'Not yet watched'}`
-
-   
-// Create a class here
-// =====================================
-
-class Episode {
-  constructor(title, duration, hasBeenWatched) {
+class Show {
+  constructor(title, numberOfSeasons, episodesPerSeason) {
     this.title = title;
-    this.duration = duration;
-    this.hasBeenWatched = hasBeenWatched;
+    this.numberOfSeasons = numberOfSeasons;
+    this.episodesPerSeason = episodesPerSeason;
   }
 }
 
-let firstEpisode = new Episode('Dark Beginnings', 45, true);
-let secondEpisode = new Episode('The Mystery Continues', 45, false);
-let thirdEpisode = new Episode('The Unexpected Climax', 60, false);
+const tau = new Show('The Story of Tau', 5, 12);
+const meldrum = new Show('The Hero of Old Meldrum', 3, 6);
+const clara = new Show('The Bugs of Isla Clara', 6, 15);
 
-// =====================================
+const shows = [tau, meldrum, clara];
 
-document.querySelector('#first-episode-info').innerText = `Episode: ${firstEpisode.title}
-Duration: ${firstEpisode.duration} min
-   
-   
-    
-${firstEpisode.hasBeenWatched ? 'Already watched' : 'Not yet watched'}`;
+// Modify the following code
+// ======================
 
-document.querySelector('#second-episode-info').innerText = `Episode: ${secondEpisode.title}
-Duration: ${secondEpisode.duration} min
-${secondEpisode.hasBeenWatched ? 'Already watched' : 'Not yet watched'}`;
+const generateComponent = (show) => {
+  const titleText = show.title;
+  const seasonsText = show.numberOfSeasons + ' seasons';
+  const episodesText = show.episodesPerSeason + ' episodes per season';
+  return {
+    titleText,
+    seasonsText,
+    episodesText
+  };
+}
 
-document.querySelector('#third-episode-info').innerText = `Episode: ${thirdEpisode.title}
-Duration: ${thirdEpisode.duration} min
-${thirdEpisode.hasBeenWatched ? 'Already watched' : 'Not yet watched'}`;
-                
+const tauComponent = generateComponent(tau);
+const meldrumComponent = generateComponent(meldrum);
+const claraComponent = generateComponent(clara);
+
+
+const showComponents = [tauComponent, meldrumComponent, claraComponent];
+
+// ======================
+// Modify the code above
+
+const body = document.querySelector('body');
+
+const updateShows = () => {
+  for (let show of showComponents) {
+    const showPane = document.createElement('div');
+    showPane.classList.add('series-frame');
+    const showHeading = document.createElement('h2');
+    showHeading.innerText = show.titleText;
+    const showDetails = document.createElement('p');
+    const seasons = document.createElement('p');
+    seasons.innerText = show.seasonsText;
+    const episodes = document.createElement('p');
+    episodes.innerText = show.episodesText;
+    showDetails.append(seasons);
+    showDetails.append(episodes);
+    showPane.append(showHeading);
+    showPane.append(showDetails);
+    body.append(showPane);
+  }
+};
+
+updateShows();
