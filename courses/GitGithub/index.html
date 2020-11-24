@@ -54,57 +54,58 @@
     background-color:#1e1e1e
 }
 </style>
+  
 </head>
 <body>
-    <div class="container mt-4">
-        
+  
+  <div class="container mt-4">
     
-        <br><br>
-        
+    <br><br>
+    <div class="console mt-4">
+      <div class="console-head">
+        <div class="console-dot console-dot-red"></div>
+        <div class="console-dot console-dot-yellow"></div>
+        <div class="console-dot console-dot-green"></div>
+      </div>
+      <div class="console-body text-center">
+        <h1 class="p-3 m-3">Git Github</h1>
+      </div>
+    </div>
     
-         <div class="console mt-4">
-    <div class="console-head">
-      <div class="console-dot console-dot-red"></div>
-      <div class="console-dot console-dot-yellow"></div>
-      <div class="console-dot console-dot-green"></div>
-    </div>
-    <div class="console-body text-center">
-     <h1 class="p-3 m-3">Git Github</h1>
-    </div>
-  </div>
-        
-        <h2>Initialisé Git</h2>
-        <pre>$ git config --global user.name "John Doe"</pre>
-       
+    <h2>Initialisé Git</h2>
+    <pre>$ git config --global user.name "John Doe"</pre>
     <pre>$ git config --global user.email johndoe@example.com</pre>
-    <h2></h2>
-    <pre>git config --list</pre>
+    <pre>$ git config --list</pre>
     <pre>$ git config --global color.diff auto</pre>
     <pre>$ git config --global color.status auto</pre>
     <pre>$ git config --global color.branch auto</pre>
     <pre>$ git config --global core.editor notepad++</pre>
     <pre>$ git config --global merge.tool vimdiff</pre>
+    
     <h2>Initialized empty Git repository</h2>
     <pre>$ git init</pre>
+    
     <h2>clone fork repositeres</h2>
     <pre>$ git clone https://github.com/OpenClassrooms-Student-Center/ProjetOpenSource.git</pre>
+    
     <h2>bransh</h2>
     <pre>$ git branch</pre>
     <pre>$ git branch cagnotte</pre>
+    
     <h2>create branch</h2>
     <pre>$ git branch cagnotte</pre>
     <pre>$ git checkout cagnotte</pre>
+    
     <h2>delet branch</h2>
     <pre>$ git branch -d cagnotte</pre>
+    
     <h2>add commit</h2>
     <pre>$ git add .</pre>
     <pre>$ git add text.txt</pre>
     <pre>$ git commit -m “Réalisation de la partie cagnotte côté front end”</pre>
     <pre>$ git push</pre>
-    <h2></h2>
     <pre>$ git status</pre>
     <pre>$ git stash</pre>
-    <h2></h2>
     <pre>$ git stash apply</pre>
     <pre>$ git stash list</pre>
     <pre>$ git stash apply stash@{0}</pre>
@@ -115,6 +116,7 @@
     <pre>$ git checkout brancheCommit</pre>
     <pre>$ git reset --hard ca83a6df</pre>
     <pre>$ git commit --amend -m "Votre nouveau message de commit"</pre>
+    
     <h2>revet</h2>
     <pre>$ git revert HEAD^</pre>
     <pre>$ ssh-keygen -t rsa -b 4096 -C "johndoe@example.com"</pre>
@@ -124,24 +126,30 @@
     <pre>$ git revert HEAD</pre>
     <pre>$ git blame monFichier.php</pre>
     <pre>$ git cherry-pick d356940 de966d4</pre>
+    
     <h2>pull</h2>
     <pre>$ git pull remote</pre>
     <pre>$ git fetch</pre>
     <pre>$ git merge</pre>
     <pre>$ git merge Nouvelle Fonctionnalité</pre>
+    
     <h2>rebase</h2>
     <pre>$ edit 54dfiosd</pre>
     <pre>$ git rebase -i HEAD~3</pre>
+    
     <p>Stopped at 54dfiosd... updated the gemspec to hopefully work better You can amend the commit now, with</p>
-    <pre>git commit --amend</pre>
+    <pre>$ git commit --amend</pre>
+    
     <p>Once you’re satisfied with your changes, run</p>
-    <pre>git rebase --continue</pre>
+    <pre>$ git rebase --continue</pre>
+    
     <h2>bisect</h2>
     <pre>$ git bisect good</pre>
     <pre>$ git bisect bad</pre>
+    
     <h2>submodule</h2>
     <pre>$ git submodule add https://github.com/etudiantOC/ProjetSubModule dossier/destination</pre>
-    <pre>git subtree push -P monRépertoire git@mon-serveur-git:group/projet.git master</pre>
+    <pre>$ git subtree push -P monRépertoire git@mon-serveur-git:group/projet.git master</pre>
     
     <h1>SHA-1</h1>
     <p>
@@ -150,44 +158,19 @@
             sha1.fr
         </a>
     </p>
+    
     <h1>Workflow</h1>
     <pre>$ git flow init</pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
-    <pre>$ </pre>
     
     <p>
-        Nous allons maintenant voir quelques-uns des outils les plus connus et les plus utilisés de la marketplace de GitHub.
-
-Dans le domaine de la sécurité, nous pouvons citer WhiteSource Bolt !
-
-WhiteSource Bolt for GitHub est une application gratuite, qui analyse en permanence tous vos dépôts, détecte les vulnérabilités des composants open source et apporte des correctifs. Il prend en charge les référentiels privés et publics ! ￼
-
-Dans le domaine de la gestion de projets, nous pouvons citer ZenHub.
-
-ZenHub est le seul outil de gestion de projet qui s'intègre de manière native dans l'interface utilisateur de GitHub. ZenHub est un outil de gestion de projet agile fonctionnant par sprint et générant des rapports assez poussés.
-
-Dans le domaine de l'intégration continue, nous pouvons bien sûr citer Travis CI, qui est la référence en la matière.
-
-Travis CI permet à votre équipe de tester et déployer vos applications en toute confiance. Très polyvalent, il s'adapte aux petits comme aux grands projets !
-
-Il existe bien sûr de nombreux autres outils sur la marketplace.
+      Nous allons maintenant voir quelques-uns des outils les plus connus et les plus utilisés de la marketplace de GitHub.<br>
+      Dans le domaine de la sécurité, nous pouvons citer WhiteSource Bolt !<br>
+      WhiteSource Bolt for GitHub est une application gratuite, qui analyse en permanence tous vos dépôts, détecte les vulnérabilités des composants open source et apporte des correctifs. Il prend en charge les référentiels privés et publics ! ￼<br>
+      Dans le domaine de la gestion de projets, nous pouvons citer ZenHub.<br>
+      ZenHub est le seul outil de gestion de projet qui s'intègre de manière native dans l'interface utilisateur de GitHub. ZenHub est un outil de gestion de projet agile fonctionnant par sprint et générant des rapports assez poussés.<br>
+      Dans le domaine de l'intégration continue, nous pouvons bien sûr citer Travis CI, qui est la référence en la matière.<br>
+      Travis CI permet à votre équipe de tester et déployer vos applications en toute confiance. Très polyvalent, il s'adapte aux petits comme aux grands projets !<br>
+      Il existe bien sûr de nombreux autres outils sur la marketplace.
     </p>
     
 </body>
